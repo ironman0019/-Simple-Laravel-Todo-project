@@ -9,7 +9,7 @@ Note: Run migrations commends!
 
 Note: Don't forget dependencies!
 <br>
-    ```
+    ```php
     composer install
     ```
 
