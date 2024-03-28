@@ -8,6 +8,7 @@ Note: Run migrations commends!
  ```
 
 Note: Don't forget dependencies!
+<br>
     ```
     composer install
     ```
