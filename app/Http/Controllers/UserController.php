@@ -30,7 +30,7 @@ class UserController extends Controller
         // Login user
         auth()->login($user);
 
-        return redirect(route('post.index'))->with('message', 'user signup and login successfully!');
+        return redirect('/')->with('message', 'user signup and login successfully!');
 
     }
 
@@ -52,7 +52,7 @@ class UserController extends Controller
             
             $request->session()->regenerate();
 
-            return redirect(route('post.index'))->with('message', 'You are Logged in!');
+            return redirect('/')->with('message', 'You are Logged in!');
         }
 
         return back()->withErrors(['email' => 'invalid cardentials!'])->onlyInput('email');
@@ -66,6 +66,6 @@ class UserController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         
-        return redirect(route('post.index'))->with('message', 'You have been logged out!');
+        return redirect('/')->with('message', 'You have been logged out!');
     }
 }

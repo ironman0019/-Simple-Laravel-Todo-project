@@ -40,7 +40,7 @@ class PostController extends Controller
         $formFields['user_id'] = auth()->id();
 
         Post::create($formFields);
-        return redirect(route('post.index'))->with('message', 'Todo created successfully!');
+        return redirect('/')->with('message', 'Todo created successfully!');
     }
 
     /**
@@ -83,7 +83,7 @@ class PostController extends Controller
             'title' => ''
         ]);
         $post->update($formFields);
-        return redirect(route('post.index'))->with('message', 'Todo edited successfully!');
+        return redirect('/')->with('message', 'Todo edited successfully!');
     }
 
     /**
@@ -97,6 +97,6 @@ class PostController extends Controller
         }
 
         $post->delete();
-        return redirect(route('post.index'))->with('message', 'Todo deleted successfully!');
+        return redirect('/')->with('message', 'Todo deleted successfully!');
     }
 }
