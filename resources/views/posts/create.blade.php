@@ -8,7 +8,7 @@
       <label class="form-label">To do:</label> <textarea name="title" cols="150" rows="5"></textarea>
     </div>
     <button type="submit" class="btn btn-primary text-center">Submit</button>
-    <a href="{{route('post.index')}}" class="btn btn-success text-center">Back</a>
+    <a href="/" class="btn btn-success text-center">Back</a>
 
   </form>
 

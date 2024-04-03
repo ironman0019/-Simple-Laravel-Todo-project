@@ -18,6 +18,6 @@
             @enderror
         </div>
         <button type="submit" class="btn btn-primary text-center">Submit</button>
-        <a href="{{route('post.index')}}" class="btn btn-success text-center">Back</a>
+        <a href="/" class="btn btn-success text-center">Back</a>
     </form>
 </x-layout>
