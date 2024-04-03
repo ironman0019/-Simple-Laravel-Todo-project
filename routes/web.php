@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::resource('post', PostController::class);
+Route::resource('post', PostController::class)->except('index');
+Route::get('/', [PostController::class, 'index']);
 
 // Show login form
 Route::get('/login', [UserController::class, 'login']);
