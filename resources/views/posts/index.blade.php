@@ -39,10 +39,12 @@
             </tr>
         </thead>
         <tbody>
+            @php $postId = 0; @endphp
             @auth
             @foreach($posts as $post)
             <tr>
-                <td>{{$post->id}}</td>
+                @php $postId += 1 ; @endphp
+                <td>{{$postId}}</td>
                 <td>{{$post->title}}</td>
                 <td>{{auth()->user()->name}}</td>
                 <td>{{$post->started_at}}</td>
